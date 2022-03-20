@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "612340765955",
+    "project_id": "socialx-ea9a3",
+    "storage_bucket": "socialx-ea9a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:612340765955:android:9ad598f52daff6d47a0536",
+        "android_client_info": {
+          "package_name": "com.shubhankaranku.socialx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "612340765955-sj4m7e643i05kpm7nj0lat7do331cogq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBk4Pm49odD4SGAIIUwXWxG9ODGDXbI7Jc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "612340765955-sj4m7e643i05kpm7nj0lat7do331cogq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
