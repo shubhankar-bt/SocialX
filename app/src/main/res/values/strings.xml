@@ -5,4 +5,6 @@
     <string name="facebook_app_id">485504269722872</string>
     <string name="fb_login_protocol_scheme">fb485504269722872</string>
     <string name="facebook_client_token">fead942ab49a9ff677c6995a2d62a21a</string>
+    <string name="password">Password</string>
+    <string name="email">Email</string>
 </resources>

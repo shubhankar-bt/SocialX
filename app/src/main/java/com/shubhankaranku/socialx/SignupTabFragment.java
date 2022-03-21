@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,11 +33,12 @@ import com.google.firebase.database.FirebaseDatabase;
 public class SignupTabFragment extends Fragment {
 
     private TextInputEditText mName,mEmail,mNumber,mPassword;
-    private Button mRegister;
+    public static Button mRegister;
     private CheckBox mcheckBox;
     private TextView mAlreadyRegister;
     private ProgressBar mProgressBar;
     private FirebaseAuth mAuth;
+    private LinearLayout loginLayout;
 
     @Nullable
     @Override
@@ -55,14 +57,18 @@ public class SignupTabFragment extends Fragment {
         mcheckBox = root.findViewById(R.id.checkBox);
         mAlreadyRegister = root.findViewById(R.id.mAlreadyRegister);
         mProgressBar = root.findViewById(R.id.progressbar);
+        loginLayout = root.findViewById(R.id.bottmView2);
 
-        mRegister.setOnClickListener(new View.OnClickListener() {
-            @Override
+
+
+        loginLayout.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v)
             {
                 registerNewUser();
             }
         });
+
+
 
         mAlreadyRegister.setOnClickListener(new View.OnClickListener() {
 

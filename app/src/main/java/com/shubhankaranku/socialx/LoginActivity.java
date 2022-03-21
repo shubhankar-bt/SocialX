@@ -6,9 +6,13 @@ import androidx.viewpager.widget.PagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.view.LayoutInflater;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 import com.shubhankaranku.socialx.Adapter.LoginAdapter;
 
 public class LoginActivity extends AppCompatActivity {
@@ -16,6 +20,7 @@ public class LoginActivity extends AppCompatActivity {
     public static TabLayout tabLayout;
     public static ViewPager viewPager;
     float v = 0;
+
 
 
     @Override
@@ -41,11 +46,15 @@ public class LoginActivity extends AppCompatActivity {
         tabLayout.animate().translationY(0).alpha(1).setDuration(1000).setStartDelay(100).start();
 
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+
+
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
 
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 viewPager.setCurrentItem(tab.getPosition());
+
             }
 
             @Override

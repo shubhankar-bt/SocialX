@@ -7,73 +7,104 @@
     tools:context=".LoginActivity">
 
 
-    <View
+
+
+    <LinearLayout
         android:id="@+id/view"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@color/purple_200"
+        android:background="@color/pink"
+        android:elevation="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent=".21"
+        app:layout_constraintHeight_percent=".15"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0" />
+        app:layout_constraintVertical_bias="0"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SocialX"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            android:textColor="@color/white"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/v"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginTop="70dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            app:tabMode="fixed"
+            app:tabIndicatorHeight="2dp"
+            android:layout_margin="10dp"
+            app:tabIconTintMode="add"
+            android:background="@drawable/tab_bac"
+            android:elevation="5dp"
+            app:tabIndicatorColor="@color/pink"
+            app:tabRippleColor="@null"
+            app:tabIndicatorGravity="stretch"
+            app:tabIndicatorAnimationMode="elastic"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextColor="@color/black"
+            app:tabTextAppearance="@style/TabLayout"
+
+            />
+
+    </androidx.cardview.widget.CardView>
+
+
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:elevation="6dp"
         android:background="@drawable/view_bg"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHeight_percent=".82"
+        app:layout_constraintHeight_percent=".80"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1">
+        app:layout_constraintTop_toBottomOf="@+id/v"
+        android:layout_marginTop="30dp"
+        app:layout_constraintVertical_bias="0">
 
 
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/viewPager"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
+            android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tabLayout"
-            app:layout_constraintVertical_bias="0" />
-
-        <com.google.android.material.tabs.TabLayout
-            android:layout_margin="12dp"
-            android:id="@+id/tabLayout"
-            android:layout_width="match_parent"
-            app:tabIndicatorHeight="2dp"
-            app:tabMode="fixed"
-            app:tabIndicatorColor="@color/purple_200"
-            app:tabRippleColor="@null"
-            app:tabIndicatorAnimationMode="elastic"
-            app:tabSelectedTextColor="@color/purple_500"
-            app:tabTextColor="@color/black"
-            app:tabTextAppearance="@style/TabLayout"
-            android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0"
-            />
-
-
+            app:layout_constraintVertical_bias="0.0" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="60dp"
-        android:src="@drawable/quantam_logo"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+
+
+
+
+
 
 
 

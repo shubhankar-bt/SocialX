@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -66,6 +67,7 @@ public class LoginTabFragment extends Fragment {
     private CallbackManager callbackManager;
     private LoginButton loginButton;
     private static final String EMAIL = "email";
+    private LinearLayout loginLayout;
 
 
     @Nullable
@@ -94,6 +96,7 @@ public class LoginTabFragment extends Fragment {
         mProgressBar = root.findViewById(R.id.progressbar);
         password = root.findViewById(R.id.password);
         mRegisterNow = root.findViewById(R.id.registerPart);
+        loginLayout = root.findViewById(R.id.bottmView1);
 
 
         mEmail.setTranslationY(300);
@@ -163,13 +166,14 @@ public class LoginTabFragment extends Fragment {
         });
 
 
-        mLogin.setOnClickListener(new View.OnClickListener() {
+        loginLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v)
             {
                 LoginUser();
             }
         });
+
         mRegisterNow.setOnClickListener(new View.OnClickListener() {
 
             @Override
